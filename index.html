@@ -15,13 +15,18 @@
             align-items: center;
             height: 100vh;
             font-family: sans-serif;
+            text-align: center;
         }
 
         #conteudo {
             background: #0062ff;
             padding: 10px;
-            text-align: center;
-            font-family: sans-serif;
+            max-width: 90%;
+        }
+
+        h2, h3 {
+            color: white;
+            margin: 10px 0;
         }
 
         .btn {
@@ -29,33 +34,86 @@
             color: white;
             border: none;
             padding: 10px;
-            width: 80px;
+            width: 100px;
             border-radius: 5px;
             margin: 5px;
+            font-size: 1rem;
         }
 
         .images-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 10px;
+            flex-wrap: wrap;
             margin-top: 20px;
         }
 
         .images-container img {
-            width: 250px;
-            height: 200px;
+            width: 90%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
         }
 
         .top-image img {
-            width: 300px;
-            height: 150px;
+            width: 80%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .btn {
+                width: 80px;
+                font-size: 0.9rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            .images-container img {
+                max-width: 150px;
+            }
+
+            .top-image img {
+                max-width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1rem;
+            }
+
+            h3 {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                width: 70px;
+                padding: 8px;
+                font-size: 0.8rem;
+            }
+
+            .images-container img {
+                max-width: 120px;
+            }
+
+            .top-image img {
+                max-width: 180px;
+            }
         }
     </style>
 </head>
 
 <body>
     <div id="conteudo">
-        <h2><br>Oi Barbara kkkk <br>isto aqui trata-se de uma proposta de date...</h2><br>
+        <h2>Oi Barbara kkkk <br> isto aqui trata-se de uma proposta de date...</h2>
         <h3>Receba essa web flor</h3>
         <div class="top-image">
             <img src="flor.png" alt="Flor">
@@ -64,7 +122,7 @@
             <img src="bistro.jpeg" alt="Bistrô">
             <img src="oine.png" alt="Oine">
         </div>
-        <div style="margin: auto;width: 170px; margin-top: 20px;">
+        <div style="margin: auto; width: 100%; max-width: 200px; margin-top: 20px;">
             <button class="btn" onclick="sim()">SIM</button>
             <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</button>
         </div>
